@@ -179,7 +179,7 @@
 @media (max-width: 768px) {
     .buy-number-detail{
         color: white;
-        font-size: 5px;
+        font-size:10px;
     }
 }
 .idfinal{
@@ -202,7 +202,7 @@
 @media (max-width: 768px) {
     #today1{
         color:white;
-        font-size: 5px;
+        font-size: 10px;
     }
 }
 
@@ -220,7 +220,7 @@
 @media (max-width: 768px) {
     .pharmacyinfo{
         width: 350px;
-        height: 84vh;
+        height: 82vh;
         background-color:#dedede;
         box-shadow: 1px 10px 10px grey;
         overflow-y: scroll
