@@ -26,6 +26,13 @@
     position: absolute;
     z-index: 99999;
 }
+@media (max-width: 768px) {
+    .wrap{
+        max-width: 350px;
+        position: absolute;
+        z-index: 99999;
+    }
+}
 /*標頭*/
 
 
@@ -82,7 +89,7 @@
         padding: 10px 5px;
         font-size: 20px;
         font-weight: bold;
-        top: 122px;
+        top: 125px;
         left: 100%;
     }
 }
@@ -220,7 +227,7 @@
 @media (max-width: 768px) {
     .pharmacyinfo{
         width: 350px;
-        height: 82vh;
+        height: 83vh;
         background-color:#dedede;
         box-shadow: 1px 10px 10px grey;
         overflow-y: scroll
@@ -242,6 +249,16 @@
     padding: 10px 10px 0px 20px;
     border-bottom: 1px solid #666666;
     cursor: pointer;
+}
+@media (max-width: 768px) {
+    .pharmacy{
+        width: 320px;
+        height: 180px;
+        background-color: #fff;
+        padding: 10px 10px 0px 20px;
+        border-bottom: 1px solid #666666;
+        cursor: pointer;
+    }
 }
 .pharmacy:hover{
     background-color: beige
@@ -276,6 +293,19 @@
     margin-right: 10px;
     display: flex;
     justify-content: space-around;
+}
+@media (max-width: 768px) {
+    .mask{
+        width: 120px;
+        border-radius: 50px;
+        padding: 10px 10px;
+        font-size: 18px;
+        font-family: "Noto Sans TC", sans-serif;
+        color: white;
+        margin-right: 10px;
+        display: flex;
+        justify-content: space-around;
+    }
 }
 
 .orange{
