@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>口罩地圖</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap&subset=chinese-traditional" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css" /> 
+    <link rel="stylesheet" href="https://rawgit.com/mapshakers/leaflet-icon-pulse/master/src/L.Icon.Pulse.css" />
+    <link rel="stylesheet" href="/main.css" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
+    <script src="https://rawgit.com/mapshakers/leaflet-icon-pulse/master/src/L.Icon.Pulse.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<style>
+    body{
+        font-family:Noto Sans TC, sans-serif;
+    }
+</style>
+<body>
+    <div id="loading">
+        <img src="img/Ellipsis-0.9s-200px.gif" alt="loading.." />
+    </div> 
+
+    <div class="wrap">
+        <input type="checkbox" name="" id="side-menu-switch">
+        <div class="sidemenu">
+            <label for="side-menu-switch" class="Pull">
+                <i class="fa fa-angle-right"></i>
+            </label>  
+            <div class="header">
+                <div class="week"> 
+                <!--<div class="week-name">-->
+                    <h2 class="weektitle" id="week1"></h2>
+                <!--</div> -->               
+
+                    <div class="buy-number">
+                        <p id="today1"></p>
+                        <p class="buy-number-detail" id="today" >身分證末碼為<span class="idfinal">123</span>可購買</p>
+                    </div>
+                </div>
+                <input type="text" class="searchbar" placeholder="搜尋區域,地址,藥局">
+                <div class="search_btn">
+                    <i class="fa fa-search" aria-hidden="true"></i> 
+                </div>
+            </div>
+            <div class="listpharmacyinfo">
+                <ul class="pharmacyinfo">
+                <!-- <i class="fas fa-peace"></i> -->
+                <!-- <li class="pharmacy">
+                <div class="pharmacy-detail">
+                <h3 class="name"></h3>
+                <p class="address"></p>
+                <p class="phone"></p>
+                <p class="open-time">營業中 9:00~21:00</p>
+
+                </div>
+                <div class="mask 000">
+                <div class="mask">
+                <div class="adult">成人口罩</div>
+                <div class="number">0</div>>
+                </div>
+                <div class="mask">
+                <div class="child">兒童口罩</div>
+                <div class="number">0</div>
+                </div>
+                </div> 
+                </li> -->
+                </ul>      
+            </div>
+        </div>
+    </div>
+    <div id="map">
+    </div>
+</body>
+</html>
+
+<script src="./all.js"></script>

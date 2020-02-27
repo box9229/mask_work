@@ -1,0 +1,305 @@
+*{
+    margin: 0;
+    padding:0;
+    list-style: none;
+}
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+/* Loading */
+
+#loading {
+    position:fixed;  
+    top:35%;  
+    left:43%;  
+    z-index:400; 
+}
+
+.wrap{
+    width: 400px;
+    position: absolute;
+    z-index: 99999;
+}
+/*標頭*/
+
+
+.header {
+    width: 400px;
+    background-color: #73C0D8;
+
+}
+
+/* 側邊固定欄 */
+.sidemenu{
+    width: 400px;
+    transform: translateX(-100%);
+    transition-property: all;
+    transition-duration: 0.3s;
+    
+}
+.Pull{
+    width: 15px;
+    height: 50px;
+    border-radius: 0% 10px 10px 0%;
+    background-color: #73C0D8;
+    position: absolute;
+    color: white;
+    line-height: 50px;
+    padding: 10px 5px;
+    font-size: 20px;
+    font-weight: bold;
+    top: 147px;
+    left: 100%;
+}
+#side-menu-switch{
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+#side-menu-switch:checked + .sidemenu{
+    transform: translateX(0);
+
+}
+#side-menu-switch:checked + .sidemenu label .fa{
+    transform: scaleX(-1);
+}
+
+.fa-search{
+    color:black;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    padding-top: 6px;
+    margin-left: -30px;
+    color:#B2B2B2;
+}
+
+::placeholder{
+    color:#B2B2B2;
+}
+
+.week{
+    display:flex;
+    padding: 20px;
+}
+
+
+
+.buy-number{
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    padding-left: 30px;
+}
+.searchbar{
+    width: 334px;
+    border: 0;
+    outline: none;
+    padding-left: 20px;
+    margin-left: 15px;
+    height: 30px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+
+.weektitle{
+    color:white;
+    font-size: 36px;
+}
+
+#week1{
+    color:white;
+    font-size: 45px;
+}
+.buy-number-detail{
+    color: white;
+    font-size: 13px;
+}
+.idfinal{
+    font-weight: bold;
+    font-size: 20px;
+    color: #FFF126;
+}
+
+#today1{
+    color:white;
+    font-size: 18px;
+}
+
+
+/*內文*/
+
+
+.pharmacyinfo{
+    width: 400px;
+    height: 81vh;
+    background-color:#dedede;
+    box-shadow: 1px 10px 10px grey;
+    overflow-y: scroll
+    
+}
+.search_btn{
+    width: 20px;
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.pharmacy{
+    width: 370px;
+    height: 180px;
+    background-color: #fff;
+    padding: 10px 10px 0px 20px;
+    border-bottom: 1px solid #666666;
+    cursor: pointer;
+}
+.pharmacy:hover{
+    background-color: beige
+}
+
+.name{
+    padding-bottom: 10px;
+    color:#333333;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.address,.phone,.open-time{
+    padding-bottom: 5px;
+    color:#666666;
+    font-size: 17px;
+}
+.maskboth{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* JS 口罩數量 */
+.mask{
+    width: 160px;
+    border-radius: 50px;
+    padding: 10px 10px;
+    font-size: 18px;
+    font-family: "Noto Sans TC", sans-serif;
+    color: white;
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.orange{
+    background-color:#FFA573;
+}
+.gray{
+background-color: #A5A5A5;
+}
+.blue {
+    background-color: #73C0D8;
+}
+
+
+
+/* 加入地圖圖層+座標 */
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#map{
+    width: 100%;
+    height: 100%;
+}
+
+
+.marker-cluster-small {
+    background-color: rgba(181, 226, 140, 0.6);
+    }
+.marker-cluster-small div {
+    background-color: rgba(110, 204, 57, 0.6);
+    }
+
+.marker-cluster-medium {
+    background-color: rgba(241, 211, 87, 0.6);
+    }
+.marker-cluster-medium div {
+    background-color: rgba(240, 194, 12, 0.6);
+    }
+
+.marker-cluster-large {
+    background-color: rgba(253, 156, 115, 0.6);
+    }
+.marker-cluster-large div {
+    background-color: rgba(241, 128, 23, 0.6);
+    }
+
+.marker-cluster {
+    background-clip: padding-box;
+    border-radius: 20px;
+    }
+.marker-cluster div {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+
+    text-align: center;
+    border-radius: 15px;
+    font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+    }
+.marker-cluster span {
+    line-height: 30px;
+    }
+
+
+
+/*小圖標的內容設計*/
+.js_marker_detail #name{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#js_marker_detail #address #phone{
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.jsmask_adult,.jsmask_child{
+    display: flex;
+}
+.leaflet-popup-content-wrapper
+.leaflet-popup-content p {
+    margin: 8px 0;
+    color: #666666;
+}
+
+.leaflet-popup-content-wrapper
+.leaflet-popup-content {
+    margin: 20px 10px;
+    line-height: 1.4;
+    width: 250px;
+}
+
+/* 對話框樣式 */
+.jsmask_adult,.jsmask_child{
+    width: 105px;
+    border-radius: 50px;
+    padding: 8px 9px;
+    font-size: 12px;
+    font-family: "Noto Sans TC", sans-serif;
+    color: white;
+    margin-right: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.jsmask_adult,.jsmask_child .number{
+    font-weight: bold;
+}
+.orange{
+    background-color:#FFA573;
+}
+.gray{
+    background-color: #A5A5A5;
+}
+.blue {
+    background-color: #73C0D8;
+}
