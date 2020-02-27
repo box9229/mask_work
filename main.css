@@ -12,6 +12,14 @@
     left:43%;  
     z-index:400; 
 }
+@media (max-width: 768px) {
+    #loading {
+        position:fixed;  
+        top:35%;  
+        left:30%;  
+        z-index:400; 
+    }
+}
 
 .wrap{
     width: 400px;
@@ -24,7 +32,12 @@
 .header {
     width: 400px;
     background-color: #73C0D8;
-
+}
+@media (max-width: 768px) {
+    .header {
+        width: 350px;
+        background-color: #73C0D8;
+    }
 }
 
 /* 側邊固定欄 */
@@ -33,7 +46,15 @@
     transform: translateX(-100%);
     transition-property: all;
     transition-duration: 0.3s;
-    
+}
+
+@media (max-width: 768px) {
+    .sidemenu{
+        width: 350px;
+        transform: translateX(-100%);
+        transition-property: all;
+        transition-duration: 0.3s;
+    }
 }
 .Pull{
     width: 15px;
@@ -48,6 +69,22 @@
     font-weight: bold;
     top: 147px;
     left: 100%;
+}
+@media (max-width: 768px) {
+    .Pull{
+        width: 15px;
+        height: 50px;
+        border-radius: 0% 10px 10px 0%;
+        background-color: #73C0D8;
+        position: absolute;
+        color: white;
+        line-height: 50px;
+        padding: 10px 5px;
+        font-size: 20px;
+        font-weight: bold;
+        top: 137px;
+        left: 100%;
+    }
 }
 #side-menu-switch{
     position: absolute;
@@ -99,7 +136,18 @@
     border-radius: 20px;
     margin-bottom: 10px;
 }
-
+@media (max-width: 768px) {
+    .searchbar{
+        width: 290px;
+        border: 0;
+        outline: none;
+        padding-left: 20px;
+        margin-left: 15px;
+        height: 30px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+    }
+}
 
 .weektitle{
     color:white;
@@ -109,6 +157,12 @@
 #week1{
     color:white;
     font-size: 45px;
+}
+@media (max-width: 768px) {
+    #week1{
+        color:white;
+        font-size: 28px;
+    }
 }
 .buy-number-detail{
     color: white;
@@ -135,6 +189,16 @@
     background-color:#dedede;
     box-shadow: 1px 10px 10px grey;
     overflow-y: scroll
+}
+
+@media (max-width: 768px) {
+    .pharmacyinfo{
+        width: 350px;
+        height: 81vh;
+        background-color:#dedede;
+        box-shadow: 1px 10px 10px grey;
+        overflow-y: scroll
+    }
     
 }
 .search_btn{
