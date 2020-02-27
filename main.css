@@ -82,7 +82,7 @@
         padding: 10px 5px;
         font-size: 20px;
         font-weight: bold;
-        top: 137px;
+        top: 122px;
         left: 100%;
     }
 }
@@ -126,6 +126,14 @@
     text-align: end;
     padding-left: 30px;
 }
+@media (max-width: 768px) {
+    .buy-number{
+        display: flex;
+        flex-direction: column;
+        text-align: end;
+        padding-left: 58px;
+    }
+}
 .searchbar{
     width: 334px;
     border: 0;
@@ -168,17 +176,35 @@
     color: white;
     font-size: 13px;
 }
+@media (max-width: 768px) {
+    .buy-number-detail{
+        color: white;
+        font-size: 5px;
+    }
+}
 .idfinal{
     font-weight: bold;
     font-size: 20px;
     color: #FFF126;
+}
+@media (max-width: 768px) {
+    .idfinal{
+        font-weight: bold;
+        font-size: 15px;
+        color: #FFF126;
+    }
 }
 
 #today1{
     color:white;
     font-size: 18px;
 }
-
+@media (max-width: 768px) {
+    #today1{
+        color:white;
+        font-size: 5px;
+    }
+}
 
 /*內文*/
 
@@ -194,7 +220,7 @@
 @media (max-width: 768px) {
     .pharmacyinfo{
         width: 350px;
-        height: 81vh;
+        height: 84vh;
         background-color:#dedede;
         box-shadow: 1px 10px 10px grey;
         overflow-y: scroll
