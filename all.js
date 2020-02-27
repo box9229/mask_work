@@ -1,4 +1,12 @@
-ㄧ
+let map;
+let marker;
+let pharmacyMarker = {};
+let data;
+const search= document.querySelector('.searchbar');
+const searchbutton = document.querySelector('.search_btn');
+search.addEventListener('keydown',callit);
+searchbutton.addEventListener('click',callit);
+//接json資料
 const xhr = new XMLHttpRequest();
 xhr.open(`GET`, `https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.json`, true);
 xhr.send();
@@ -18,7 +26,7 @@ xhr.onload = function () {
     // var response = JSON.parse(xhr.responseText);
     // data = response.features;
     data = opentime(data);
-    callit(event);    
+  callit(event);    
   
   
 };
@@ -212,12 +220,14 @@ today();
 //取得當下"星期"
 function week1 (){
     var day_list = ['日', '一', '二', '三', '四', '五', '六'];
+
     var date = new Date();
     var day  = date.getDay(); // or "new Date().getDay()";
     var weekday = '星期' + day_list[day];
     document.getElementById("week1").textContent = weekday ;
 
 }
+
 week1();//////////叫他出來
 
 
@@ -236,8 +246,7 @@ function idfinal(){
         var idfinal = plural;
     }
 
-    document.getElementsByClassName("idfinal")[0].textContent = idfinal 
-    //getElementsByClassName,加s取的會是陣列,可取用數個同名的class[<><><>]
+    document.getElementsByClassName("idfinal")[0].textContent = idfinal //getElementsByClassName,加s取的會是陣列,可取用數個同名的class[<><><>]
     // getElementById 取用id,表唯一
 }
 idfinal();
@@ -333,7 +342,6 @@ function opentime (data) {
         }
 // console.log(d);
 
-//Loading效果
 $(document).ready(function(){
   $(window).load(function(){  //load函数
       // $("#loading").hide();
