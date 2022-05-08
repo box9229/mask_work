@@ -94,8 +94,8 @@ function flyTo({ geometry, properties }) {  // 飛到地圖的資料
 // 設定地圖＋圖標
 function initMap(){
 	map = L.map('map', {
-		center: [22.671188, 120.485712],
-		zoom: 12
+		center: [23.43617,121.37962],
+		zoom: 15
 	});
 
 	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
